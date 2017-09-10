@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Cadastrar Empregado</title>
+<link rel="stylesheet" type="text/css" href="efeitos.css">
+
+<style>
+INPUT.MeuInput {
+	width: 120px;
+	height: 30px;
+	font-family: verdana;
+	background-color: green;
+	font-style: inherit;
+	font-size: large;
+}
+</style>
+
+<style>
+INPUT.MeuInput2 {
+	width: 120px;
+	height: 20px;
+	font-family: verdana;
+	background-color: white;
+	font-style: inherit;
+	font-size: large;
+	border-color: black;
+}
+</style>
+</head>
+<body>
+	<form action="/Trabalho/cadastrarEmpregadoServlet" method="post">
+		<center>
+			<h1>CADASTRAR EMPREGADO</h1>
+			<hr>
+			<table>
+				<tr>
+					<td>NOME:</td>
+					<td><input type="text" class="MeuInput2" name="nome" id="nome"
+						value="" /></td>
+				</tr>
+				<tr>
+					<td>RG:</td>
+					<td><input type="text" class="MeuInput2" name="rg" id="rg"
+						value="" /></td>
+				</tr>
+				<tr>
+					<td>ORGÃO EMISSOR:</td>
+					<td><input type="text" class="MeuInput2" name="orgao"
+						id="orgao" value="" /></td>
+				</tr>
+				<tr>
+					<td>CPF:</td>
+					<td><input type="text" class="MeuInput2" name="cpf" id="cpf"
+						value="" /></td>
+				</tr>
+
+				<tr>
+					<td>RUA:</td>
+					<td><input type="text" class="MeuInput2" name="rua" id="rua"
+						value="" /></td>
+				</tr>
+
+				<tr>
+					<td>BAIRRO:</td>
+					<td><input type="text" class="MeuInput2" name="bairro"
+						id="bairro" value="" /></td>
+				</tr>
+
+				<tr>
+					<td>CEP:</td>
+					<td><input type="text" class="MeuInput2" name="cep" id="cep"
+						value="" /></td>
+				</tr>
+
+				<tr>
+					<td>DATA ADMISSÂO:</td>
+					<td><input type="text" class="MeuInput2" name="dataAdmisao"
+						id="dataAdmisao" value="" /></td>
+				</tr>
+
+				<tr>
+					<td>SALARIO:</td>
+					<td><input type="text" class="MeuInput2" name="salario"
+						id="salario" value="" /></td>
+				</tr>
+
+
+			</table>
+
+			<table >
+				<tr>
+					<td><input type="submit" class="btn btn-green"
+						value="&#9745 Cadastrar" /></td>
+					<td><input type="reset" class="btn btn-red"
+						value="&#10000 Limpar" /></td>
+				</tr>
+				</form>
+				<tr>
+					
+						
+						<td><input type="button" class="btn btn-blue"
+							value="&#8678 Voltar" onClick="history.go(-1)"></td>
+
+				
+					</center>
+				</tr>
+			</table>
+</body>
+</html>
