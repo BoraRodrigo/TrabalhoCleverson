@@ -6,7 +6,7 @@ import br.edu.TrabalhoCleverson.dao.FactoryDao;
 import br.edu.TrabalhoCleverson.dao.InterfaceDao;
 import br.edu.TrabalhoCleverson.entity.Empregado;
 
-public class CadastrarEmpregadoService {
+public class EmpregadoService {
 
 	public void cadastrarEmpregado(Empregado empregado) {
 		
@@ -18,5 +18,11 @@ public class CadastrarEmpregadoService {
 		InterfaceDao<Empregado> empregado = new FactoryDao().createEmpregadoDao();
 		return empregado.listar();
 	}
+	public Empregado PegarEmpregado( Empregado empregado) {
+		
+		
+		return empregado;
+	}
+
 	
 }

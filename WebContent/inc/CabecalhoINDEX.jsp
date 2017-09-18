@@ -30,6 +30,36 @@
 					<li><a href="#">Sair</a></li>
                 </ul>
             </li>
+            
+            		<li class="dropdown"><a href="#" class="dropdown-toggle"
+					data-toggle="dropdown" role="button" aria-haspopup="true"
+					aria-expanded="false"> <script language="JavaScript"
+							type="text/javascript">
+						function horas() {
+							var now = new Date();
+							var hours = now.getHours();
+							var minutes = now.getMinutes();
+							var seconds = now.getSeconds()
+							if (hours <= 9)
+								hours = "0" + hours;
+							if (minutes <= 9)
+								minutes = "0" + minutes;
+							if (seconds <= 9)
+								seconds = "0" + seconds;
+							var cdate = "<b><font color=white face=arial size=2>"
+									+ hours
+									+ ":"
+									+ minutes
+									+ ":"
+									+ seconds
+									+ " " + "</font>"
+							clock.innerHTML = cdate;
+							setTimeout("horas()", 1000);
+						}
+					</script> <span id="clock"></span> <script>
+						setTimeout("horas()", 1000);
+					</script>
+				</a></li>
           </ul>
         </div>
 		<!--/.navbar-collapse -->

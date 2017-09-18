@@ -11,7 +11,7 @@
 			<property name="hibernate.dialect" value="org.hibernate.dialect.SQLServerDialect"/>
 
 			<property name="javax.persistence.jdbc.driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
-			<property name="javax.persistence.jdbc.url" value="jdbc:sqlserver://Localhost:1433;databaseName=web"/>
+			<property name="javax.persistence.jdbc.url" value="jdbc:sqlserver://Localhost:1433;databaseName=Arquitetura"/>
 			<property name="javax.persistence.jdbc.user" value="Rodrigo"/>
 			<property name="javax.persistence.jdbc.password" value="123"/>
 

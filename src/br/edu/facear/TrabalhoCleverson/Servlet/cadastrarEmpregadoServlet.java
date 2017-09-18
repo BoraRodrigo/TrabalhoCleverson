@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import br.edu.TrabalhoCleverson.entity.Empregado;
-import br.edu.facear.TrabalhoCleverson.service.CadastrarEmpregadoService;
+import br.edu.facear.TrabalhoCleverson.service.EmpregadoService;
 
 /**
  * Servlet implementation class cadastrarEmpregadoServlet
@@ -56,7 +56,7 @@ public class cadastrarEmpregadoServlet extends HttpServlet {
 		String dataAdmisao = request.getParameter("dataAdmisao");
 		String salario = request.getParameter("salario");
 
-		new CadastrarEmpregadoService()
+		new EmpregadoService()
 				.cadastrarEmpregado(new Empregado(null, nome, rg, orgao, cpf, rua, bairro, cep, dataAdmisao, salario));
 
 		

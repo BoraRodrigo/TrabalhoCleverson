@@ -25,26 +25,30 @@ body {
 	<main class="container"> <c:import url="inc/header.jsp" /> <br>
 	<h1>Formulario Demitir Empregado</h1>
 
+
+			
 	<div class="form-group">
 		<label for="campo1">Nome Empregado:</label> <input type="text"
-			size="50" class="form-control" name="nome">
+			size="50" class="form-control" name="nome" value="${empregado.nome}">
 	</div>
 
 	<div class="form-group">
 		<label for="campo2">Ultimo Salario:</label> <input type="text"
-			size="50" class="form-control" name="ultimoSalario">
+			size="50" class="form-control" name="ultimoSalario" value="${empregado.salario}">
 	</div>
 
 
 	<div class="form-group">
 		<label for="campo3">Data Admissão:</label> <input type="date"
-			size="50" class="form-control" name="dataAdmissao">
+			size="50" class="form-control" name="dataAdmissao" value="${empregado.dataAdmisao}">
 	</div>
 
 	<div class="form-group">
 		<label for="campo3">Data Demissão:</label> <input type="date"
-			size="50" class="form-control" name="dataDemissão">
+			id="dataAtual" size="50" class="form-control" name="dataDemissão">
 	</div>
+	
+
 
 	<div class="form-group">
 		<label for="campo4">Motivo Demissão:</label> <input type="text"
@@ -53,7 +57,7 @@ body {
 
 	<div class="form-group">
 		<label for="campo1">Cpf:</label> <input type="text" size="50"
-			class="form-control" name="cpf">
+			class="form-control" name="cpf"  value="${empregado.cpf}">
 	</div>
 
 	<h1>DESCRIÇÃO DE VERBAS</h1>
@@ -71,6 +75,14 @@ body {
 		<label for="campo1">Total:</label> <input type="text" size="50"
 			class="form-control" name="total">
 	</div>
+	
+	
+	
+	<script>
+			document.getElementById('dataAtual').value = new Date().toISOString().substring(0, 10);
+</script>
+
+
 
 
 	<input type="submit" class="btn btn-green" value="Comfirmar Demissão" />

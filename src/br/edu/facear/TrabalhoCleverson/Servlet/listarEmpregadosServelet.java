@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import br.edu.TrabalhoCleverson.dao.EmpreDAO;
 import br.edu.TrabalhoCleverson.entity.Empregado;
-import br.edu.facear.TrabalhoCleverson.service.CadastrarEmpregadoService;
+import br.edu.facear.TrabalhoCleverson.service.EmpregadoService;
 
 /**
  * Servlet implementation class listarEmpregadosServelet
@@ -37,7 +37,7 @@ public class listarEmpregadosServelet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		CadastrarEmpregadoService service = new CadastrarEmpregadoService();
+		EmpregadoService service = new EmpregadoService();
 		List<Empregado> listaEmpregado = new ArrayList<Empregado>();
 		listaEmpregado = new EmpreDAO().listar();
 

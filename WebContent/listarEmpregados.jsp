@@ -55,8 +55,8 @@ body {
 						<td>${empregado.dataAdmisao}</td>
 						<td>${empregado.salario}</td>
 							
-						<td><a class="btn btn-primary" href="/Trabalho/demitirempregadoServlet?id=${empregado.id}">Demitir Empregado </a></td>	
-
+						<td><a class="btn btn-primary" href="/Trabalho/ObterDados?id=${empregado.id}"  method="get">Demitir Empregado </a></td>	
+				
 					</tr>
 				</c:forEach>
 			</table>

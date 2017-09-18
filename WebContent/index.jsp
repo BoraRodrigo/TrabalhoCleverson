@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+	pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -17,23 +17,19 @@ body {
 </style>
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" type="text/css" href="efeitos.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="efeitos.css">
 </head>
 <body>
 	<c:import url="inc/CabecalhoINDEX.jsp" />
 	<br>
-	<main class="container">
-	 <a class="btn btn-green"
+	<main class="container"> <a class="btn btn-green"
 		href="cadastrarEmpregado.jsp"><i class="fa fa-plus"></i> Novo
 		Empregado</a> <br>
 	<br>
-	<form action="/Trabalho/demitirempregadoServlet" method="get">
-		<input type="submit" class="btn btn-red" value="DEMITIR EMPREGADO">
-	</form>
-	<br>
 	<form action="/Trabalho/listarEmpregadosServelet" method="get">
-		<input type="submit" class="btn btn-red"  value="LISTAR EMPREGADO">
+		<input type="submit" class="btn btn-red" value="LISTAR EMPREGADO">
 	</form>
 	<br>
 	</main>
