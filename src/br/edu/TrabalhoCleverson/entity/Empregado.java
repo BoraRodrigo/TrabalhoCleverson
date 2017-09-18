@@ -4,18 +4,21 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
+import javax.persistence.PersistenceUnit;
+import javax.persistence.PersistenceUnits;
 import javax.persistence.Table;
-import javax.xml.bind.annotation.XmlRootElement;
 
+@PersistenceUnits({@PersistenceUnit(unitName="Trabalho")})
 @Entity
 @Table(name = "EMPREGADO")
-@XmlRootElement
+@NamedQueries({@NamedQuery(name="Empregado.findAll", query="SELECT e FROM Empregado e")})
 public class Empregado {
 	
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	
 	private Integer id;
 	private String nome;
 	private String rg;
@@ -26,8 +29,27 @@ public class Empregado {
 	private String bairro;
 	private String cep;
 	private String dataAdmisao;
-	private float salario;
+	private String salario;
 	
+	public Empregado(){
+		
+	}
+	
+	public Empregado(Integer id, String nome, String rg, String orgaoemissor, String cpf, String rua, String bairro,
+			String cep, String dataAdmisao, String salario) {
+		super();
+		this.id = id;
+		this.nome = nome;
+		this.rg = rg;
+		this.orgaoemissor = orgaoemissor;
+		this.cpf = cpf;
+		this.rua = rua;
+		this.bairro = bairro;
+		this.cep = cep;
+		this.dataAdmisao = dataAdmisao;
+		this.salario = salario;
+	}
+
 	public String getNome() {
 		return nome;
 	}
@@ -100,11 +122,11 @@ public class Empregado {
 		this.dataAdmisao = dataAdmisao;
 	}
 
-	public float getSalario() {
+	public String getSalario() {
 		return salario;
 	}
 
-	public void setSalario(float salario) {
+	public void setSalario(String salario) {
 		this.salario = salario;
 	}
 

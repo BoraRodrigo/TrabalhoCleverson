@@ -1,7 +1,10 @@
 package br.edu.facear.TrabalhoCleverson.Servlet;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
+import javax.persistence.metamodel.SetAttribute;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -9,21 +12,21 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import br.edu.TrabalhoCleverson.dao.EmpreDAO;
 import br.edu.TrabalhoCleverson.entity.Empregado;
 import br.edu.facear.TrabalhoCleverson.service.CadastrarEmpregadoService;
 
 /**
- * Servlet implementation class cadastrarEmpregadoServlet
+ * Servlet implementation class listarEmpregadosServelet
  */
-
-@WebServlet("/cadastrarEmpregadoServlet")
-public class cadastrarEmpregadoServlet extends HttpServlet {
+@WebServlet("/listarEmpregadosServelet")
+public class listarEmpregadosServelet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public cadastrarEmpregadoServlet() {
+	public listarEmpregadosServelet() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
@@ -34,6 +37,16 @@ public class cadastrarEmpregadoServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		CadastrarEmpregadoService service = new CadastrarEmpregadoService();
+		List<Empregado> listaEmpregado = new ArrayList<Empregado>();
+		listaEmpregado = new EmpreDAO().listar();
+
+		System.out.println("Rodrigo:  " + listaEmpregado.get(1).getNome());
+
+		request.setAttribute("listaEmpregado", listaEmpregado);
+		RequestDispatcher rd = getServletContext().getRequestDispatcher("/listarEmpregados.jsp");
+
+		rd.forward(request, response);
 	}
 
 	/**
@@ -42,24 +55,6 @@ public class cadastrarEmpregadoServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		
-		RequestDispatcher rd = getServletContext().getRequestDispatcher("/cadastrarEmpregado.jsp");
-		rd.forward(request, response);
-
-		String nome = request.getParameter("nome");
-		String rg = request.getParameter("rg");
-		String orgao = request.getParameter("orgao");
-		String cpf = request.getParameter("cpf");
-		String rua = request.getParameter("rua");
-		String bairro = request.getParameter("bairro");
-		String cep = request.getParameter("cep");
-		String dataAdmisao = request.getParameter("dataAdmisao");
-		String salario = request.getParameter("salario");
-
-		new CadastrarEmpregadoService()
-				.cadastrarEmpregado(new Empregado(null, nome, rg, orgao, cpf, rua, bairro, cep, dataAdmisao, salario));
-
-		
 
 	}
 

@@ -1,7 +1,10 @@
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta charset="ISO-8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>MEU EMPREGADO</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -16,12 +19,13 @@ body {
 <link rel="stylesheet" type="text/css" href="efeitos.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="efeitos.css">
-
 </head>
 <body>
 	<c:import url="inc/CabecalhoINDEX.jsp" />
-	<main class="container"> <a class="btn btn-green"
-		href="cadastrarEmpregado.html"><i class="fa fa-plus"></i> Novo
+	<br>
+	<main class="container">
+	 <a class="btn btn-green"
+		href="cadastrarEmpregado.jsp"><i class="fa fa-plus"></i> Novo
 		Empregado</a> <br>
 	<br>
 	<form action="/Trabalho/demitirempregadoServlet" method="get">
@@ -29,15 +33,11 @@ body {
 	</form>
 	<br>
 	<form action="/Trabalho/listarEmpregadosServelet" method="get">
-		<input type="submit" class="btn btn-red" value="LISTAR EMPREGADO">
+		<input type="submit" class="btn btn-red"  value="LISTAR EMPREGADO">
 	</form>
 	<br>
-	<button class="gbqfb" aria-label="Pesquisar Gmail" name="" id="gbqfb">
-		<span class="gbqfi gb_6b"></span>
-	</button>
-
 	</main>
-	<c:import url="../inc/footer.jsp" />
+	<c:import url="inc/footer.jsp" />
 
 </body>
 </html>

@@ -9,11 +9,9 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 @Entity
 @Table(name = "EMPREGADOR")
-@XmlRootElement
 public class Empregador {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	
 	private Integer id;
 	private String nome;
 	private String rg;

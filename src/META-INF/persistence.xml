@@ -3,18 +3,20 @@
 
 	<persistence-unit name="Trabalho" transaction-type="RESOURCE_LOCAL">
 
-		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+		<class>br.edu.TrabalhoCleverson.entity.Empregado</class>
+		<class>br.edu.TrabalhoCleverson.entity.Empregador</class>
 
 		<properties>
 			<property name="hibernate.dialect" value="org.hibernate.dialect.SQLServerDialect"/>
 
 			<property name="javax.persistence.jdbc.driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
-			<property name="javax.persistence.jdbc.url" value="jdbc:sqlserver://Localhost:1433;DatabaseName=javaweb"/>
+			<property name="javax.persistence.jdbc.url" value="jdbc:sqlserver://Localhost:1433;databaseName=web"/>
 			<property name="javax.persistence.jdbc.user" value="Rodrigo"/>
 			<property name="javax.persistence.jdbc.password" value="123"/>
 
 			<property name="hibernate.show_sql" value="true"/>
-			<property name="hibernate.format_sql" value="false"/>
+			<property name="hibernate.format_sql" value="true"/>
 			<property name="hibernate.hbm2ddl.auto" value="update"/>
 			
 			<property name="hibernate.default_schema" value="dbo"/>

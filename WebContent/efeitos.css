@@ -88,3 +88,39 @@ INPUT.MeuInput2 {
 .alinhar{
 float:right
 }
+
+
+#gbqfb {
+    border: 1px solid transparent;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    height: 30px;
+    margin: 0;
+    outline: none;
+    padding: 0 0;
+    width: 60px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background: #4285f4;
+    background: -webkit-linear-gradient(top,#4387fd,#4683ea);
+    background: linear-gradient(top,#4387fd,#4683ea);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#4387fd,endColorstr=#4683ea,GradientType=1);
+}
+
+.gbqfi {
+    background-position: 0 -2321px;
+    display: inline-block;
+    margin: -1px;
+    height: 30px;
+    width: 30px;
+}
+
+.gb_6b {
+    background-image: url(//ssl.gstatic.com/gb/images/v1_e3444bc5.png);
+    -webkit-background-size: 92px 2731px;
+    background-size: 92px 2731px;
+}
+
+
