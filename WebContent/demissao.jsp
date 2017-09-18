@@ -8,6 +8,12 @@
 <title>Demissão</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
+
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <style>
 body {
@@ -51,8 +57,13 @@ body {
 
 
 	<div class="form-group">
-		<label for="campo4">Motivo Demissão:</label> <input type="text"
-			size="50" class="form-control" name="motivo">
+		<label for="campo4">Motivo Demissão:</label>
+		 <select class="form-control" id="tipodemissao" name="motivo">
+		 <option value =""> -----------</option>
+		 <option value =""> Justa Causa</option>
+		 <option value =""> Sem Justa Causa</option>
+
+		 </select>
 	</div>
 
 	<div class="form-group">
@@ -75,7 +86,6 @@ body {
 		<label for="campo1">Total:</label> <input type="text" size="50"
 			class="form-control" name="total">
 	</div>
-	
 	
 	
 	<script>
