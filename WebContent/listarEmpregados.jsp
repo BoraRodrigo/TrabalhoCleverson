@@ -37,25 +37,26 @@ body {
 
 	<c:choose>
 		<c:when test="${not empty listaEmpregado}">
-			<table class="table table-striped">
-				<tr>
+			<table   class="table table-condensed " border="2" bordercolor="black">
+				<tr bgcolor="black" style="color: white;">
 					<td >Id</td>
 					<td>Nome</td>
 					<td>Cpf</td>
 					<td>Data de admissão</td>
 					<td>Salário</td>
+					<td align="center">Demitir</td>
 
 
 				</tr>
 				<c:forEach var="empregado" items="${listaEmpregado}">
 					<tr>
-						<td >${empregado.id}</td>
+						<td>${empregado.id}</td>
 						<td>${empregado.nome}</td>
 						<td>${empregado.cpf}</td>
 						<td>${empregado.dataAdmisao}</td>
 						<td>${empregado.salario}</td>
 							
-						<td><a class="btn btn-primary" href="/Trabalho/ObterDados?id=${empregado.id}"  method="get">Demitir Empregado </a></td>	
+						<td align="center" ><a  class="btn btn-primary" href="/Trabalho/ObterDados?id=${empregado.id}"  method="get">Demitir Empregado </a></td>	
 				
 					</tr>
 				</c:forEach>

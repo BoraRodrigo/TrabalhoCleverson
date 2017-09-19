@@ -92,9 +92,6 @@ body {
 			document.getElementById('dataAtual').value = new Date().toISOString().substring(0, 10);
 </script>
 
-
-
-
 	<input type="submit" class="btn btn-green" value="Comfirmar Demissão" />
 	<input type="reset" class="btn btn-red" value="&#10000 Limpar" /> <c:import
 		url="inc/footer.jsp" /> </main>

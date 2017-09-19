@@ -122,5 +122,12 @@ float:right
     -webkit-background-size: 92px 2731px;
     background-size: 92px 2731px;
 }
-
+.texto{
+  font-family: arial;
+  font-size:20px;
+  font-weight:700;
+  text-transform: uppercase;
+  cursor: pointer;
+  display:inline-block;
+}
 
