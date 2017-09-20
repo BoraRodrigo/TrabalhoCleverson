@@ -75,11 +75,11 @@ public class CalculoDemissao {
 		int f = 0;
 		
 		StringTokenizer st = new StringTokenizer(inicio);
-		st.nextToken("/");
-		recebe=st.nextToken("/");
+		st.nextToken("-");
+		recebe=st.nextToken("-");
 		StringTokenizer stf = new StringTokenizer(fim);
-		stf.nextToken("/");
-		recebefim=stf.nextToken("/");
+		stf.nextToken("-");
+		recebefim=stf.nextToken("-");
 		
 		i = Integer.parseInt(recebe);
 		f = Integer.parseInt(recebefim);

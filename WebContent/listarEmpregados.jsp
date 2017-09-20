@@ -37,6 +37,7 @@ body {
 
 	<c:choose>
 		<c:when test="${not empty listaEmpregado}">
+			<div class="table-responsive">
 			<table   class="table table-condensed " border="2" bordercolor="black">
 				<tr bgcolor="black" style="color: white;">
 					<td >Id</td>
@@ -61,6 +62,7 @@ body {
 					</tr>
 				</c:forEach>
 			</table>
+			</div>
 		</c:when>
 		<c:otherwise>
 			<br>

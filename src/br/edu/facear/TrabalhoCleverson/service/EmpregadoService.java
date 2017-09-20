@@ -5,6 +5,7 @@ import java.util.List;
 import br.edu.TrabalhoCleverson.dao.FactoryDao;
 import br.edu.TrabalhoCleverson.dao.InterfaceDao;
 import br.edu.TrabalhoCleverson.entity.Empregado;
+import br.edu.facear.TrabalhoCleverson.bussines.TipoDemissao;
 
 public class EmpregadoService {
 
@@ -22,6 +23,14 @@ public class EmpregadoService {
 		
 		
 		return empregado;
+	}
+	public void tipoDemisao(float Salario, int dias, boolean aviso, boolean vencida, String inicio, String fim,String tipo) {
+		if(tipo.equals("justaCausa")) {
+			TipoDemissao demissao = new TipoDemissao();
+			System.out.println(demissao.DemissaoJusta(Salario, dias, aviso, vencida, inicio, fim));
+			
+	
+		}
 	}
 
 	

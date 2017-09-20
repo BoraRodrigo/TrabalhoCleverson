@@ -51,6 +51,5 @@ public class TipoDemissao {
 				+ cd.AvisoPrevio( aviso, Salario);
 
 		return calculo;
-
 	}
 }

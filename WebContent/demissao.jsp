@@ -58,10 +58,11 @@ body {
 
 	<div class="form-group">
 		<label for="campo4">Motivo Demissão:</label>
-		 <select class="form-control" id="tipodemissao" name="motivo">
+		 <select class="form-control" id="tipodemissao" name="tipodemissao">
 		 <option value =""> -----------</option>
-		 <option value =""> Justa Causa</option>
-		 <option value =""> Sem Justa Causa</option>
+		 <option value ="justaCausa"> Justa Causa</option>
+		 <option value ="semjustaCausa"> Sem Justa Causa</option>
+		 <option value ="pedidoDemisao"> Pedido Demissão</option>
 
 		 </select>
 	</div>
@@ -70,7 +71,43 @@ body {
 		<label for="campo1">Cpf:</label> <input type="text" size="50"
 			class="form-control" name="cpf"  value="${empregado.cpf}">
 	</div>
+	
+	<div class="form-group">
+		<label for="campo1">Dias Trabalhados:</label> <input type="text" size="50"
+			class="form-control" name="diastrabalhado">
+	</div>
+	
+	<div class="form-group">
+		<label for="campo4">Ferias Vencidas:</label>
+		 <select class="form-control" id="ferias" name="ferias">
+		 <option value ="">         </option>
+		 <option value ="sim">SIM</option>
+		 <option value ="nao">NÃO</option>
 
+		 </select>
+	</div>
+	
+	
+	<div class="form-group">
+		 <label for="campo4">Aviso Trabalhado:</label>
+		 <select class="form-control" id="aviso" name="aviso">
+		 <option value ="">         </option>
+		 <option value ="sim">SIM</option>
+		 <option value ="nao">NÃO</option>
+
+		 </select>
+	</div>
+	
+	
+		
+			<form action="/Trabalho/calcularVerbasServlet" method="post">
+			<input type="submit" class="btn btn-green" value="Calcular Verbas" />
+			</form>
+			<br>
+			<a  class="btn btn-green" href="/Trabalho/calcularVerbasServlet?ultimoSalario"  method="get">Calculo </a>
+		
+	
+	
 	<h1>DESCRIÇÃO DE VERBAS</h1>
 	<div class="form-group">
 		<label for="campo1">Saldo de Salario:</label> <input type="text"
@@ -83,7 +120,7 @@ body {
 	</div>
 
 	<div class="form-group">
-		<label for="campo1">Total:</label> <input type="text" size="50"
+		   <label for="campo1">Total:</label> <input type="text" size="50"
 			class="form-control" name="total">
 	</div>
 	
