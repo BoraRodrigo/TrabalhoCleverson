@@ -33,6 +33,7 @@ body {
 
 
 			
+	<form action="/Trabalho/calcularVerbasServlet" method="post">
 	<div class="form-group">
 		<label for="campo1">Nome Empregado:</label> <input type="text"
 			size="50" class="form-control" name="nome" value="${empregado.nome}">
@@ -100,11 +101,10 @@ body {
 	
 	
 		
-			<form action="/Trabalho/calcularVerbasServlet" method="post">
 			<input type="submit" class="btn btn-green" value="Calcular Verbas" />
 			</form>
 			<br>
-			<a  class="btn btn-green" href="/Trabalho/calcularVerbasServlet?ultimoSalario"  method="get">Calculo </a>
+			<a  class="btn btn-green" href="/Trabalho/calcularVerbasServlet?ultimoSalario"  method="post">Calculo </a>
 		
 	
 	

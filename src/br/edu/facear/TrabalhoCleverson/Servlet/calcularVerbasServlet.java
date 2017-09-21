@@ -31,7 +31,16 @@ public class calcularVerbasServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-EmpregadoService service = new EmpregadoService();
+	
+		
+	
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	EmpregadoService service = new EmpregadoService();
 		
 		System.out.println("Entrou calcular servelet");
 		
@@ -44,29 +53,19 @@ EmpregadoService service = new EmpregadoService();
 		String dataDemisao = request.getParameter("dataDemissão");
 		String salario = request.getParameter("ultimoSalario");
 		
-System.out.println(tipodemisao);
-System.out.println(avisoPrevio);
-System.out.println(feriasVencidas);
-System.out.println(diasTrabalhados);
-System.out.println(dataAdmisao);
-System.out.println(dataDemisao);
-System.out.println("SALARIO: "+salario);
+		System.out.println(tipodemisao);
+		System.out.println(avisoPrevio);
+		System.out.println(feriasVencidas);
+		System.out.println(diasTrabalhados);
+		System.out.println(dataAdmisao);
+		System.out.println(dataDemisao);
+		System.out.println("SALARIO: "+salario);
 
 		
 		service.tipoDemisao(Float.parseFloat(salario), Integer.parseInt(diasTrabalhados), 
-				true, true, dataAdmisao, dataDemisao, tipodemisao);
+				avisoPrevio, feriasVencidas, dataAdmisao, dataDemisao, tipodemisao);
 		
-		
-		
-		
-		
-	}
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+	
 	}
 
 }
