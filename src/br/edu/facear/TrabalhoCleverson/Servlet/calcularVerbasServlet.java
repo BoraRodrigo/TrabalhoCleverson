@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import br.edu.TrabalhoCleverson.dao.EmpreDAO;
 import br.edu.facear.TrabalhoCleverson.bussines.TipoDemissao;
 import br.edu.facear.TrabalhoCleverson.service.EmpregadoService;
 
@@ -52,20 +53,25 @@ public class calcularVerbasServlet extends HttpServlet {
 		String dataAdmisao = request.getParameter("dataAdmissao");
 		String dataDemisao = request.getParameter("dataDemissão");
 		String salario = request.getParameter("ultimoSalario");
+		String id = request.getParameter("id");
 		
-		System.out.println(tipodemisao);
-		System.out.println(avisoPrevio);
-		System.out.println(feriasVencidas);
-		System.out.println(diasTrabalhados);
-		System.out.println(dataAdmisao);
-		System.out.println(dataDemisao);
-		System.out.println("SALARIO: "+salario);
-
+		EmpreDAO dao = new EmpreDAO();
+		dao.PegarEmpregado(Integer.parseInt(id));
 		
-		service.tipoDemisao(Float.parseFloat(salario), Integer.parseInt(diasTrabalhados), 
+		float saldo=service.tipoDemisao(Float.parseFloat(salario), Integer.parseInt(diasTrabalhados), 
 				avisoPrevio, feriasVencidas, dataAdmisao, dataDemisao, tipodemisao);
+
+		request.setAttribute("empregado", dao.PegarEmpregado(Integer.parseInt(id)));
+		request.setAttribute("saldo", saldo);
+		request.setAttribute("diasTrabalhados", diasTrabalhados);
+		request.setAttribute("avisoPrevio", avisoPrevio.toUpperCase());
+		request.setAttribute("feriasVencidas", feriasVencidas.toUpperCase());
 		
-	
+		
+		RequestDispatcher rd = getServletContext().getRequestDispatcher("/demissao.jsp");
+
+		rd.forward(request, response);
+
 	}
 
 }

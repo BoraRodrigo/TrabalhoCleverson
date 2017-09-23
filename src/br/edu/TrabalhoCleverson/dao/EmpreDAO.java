@@ -61,6 +61,7 @@ public class EmpreDAO implements InterfaceDao<Empregado> {
 				empregado.setSalario((listaEmpregado.get(i).getSalario()));
 				empregado.setCpf(listaEmpregado.get(i).getCpf());
 				empregado.setDataAdmisao((listaEmpregado.get(i).getDataAdmisao()));
+				empregado.setId(listaEmpregado.get(i).getId());
 			}
 		}	
 		return empregado;

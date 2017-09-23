@@ -24,11 +24,13 @@ public class EmpregadoService {
 		
 		return empregado;
 	}
-	public void tipoDemisao(float Salario, int dias, String aviso, String vencida, String inicio, String fim,String tipo) {
+	public float tipoDemisao(float Salario, int dias, String aviso, String vencida, String inicio, String fim,String tipo) {
+		float saldo = 0;
 		if(tipo.equals("justaCausa")) {
 			TipoDemissao demissao = new TipoDemissao();
-			System.out.println(demissao.DemissaoJusta(Salario, dias, aviso, vencida, inicio, fim));
+			saldo= demissao.DemissaoJusta(Salario, dias, aviso, vencida, inicio, fim);
 		}
+		return saldo;
 	}
 
 	

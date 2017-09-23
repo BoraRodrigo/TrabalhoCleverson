@@ -27,7 +27,7 @@
 					<ul class="dropdown-menu">
 						<li><a href="#">Entrar</a></li>
 						<li><a href="#">Mudar Senha</a></li>
-						<li><a href="#">Sair</a></li>
+						<li><a href="..Login.jsp">Sair</a></li>
 					</ul></li>
 
 				<li class="dropdown"><a href="#" class="dropdown-toggle"
