@@ -70,9 +70,7 @@ body {
 		</c:otherwise>
 	</c:choose>
 
-	<form action="/Trabalho/demitirempregadoServlet" method="get">
-		<input type="submit" class="btn btn-red" value="DEMITIR EMPREGADO">
-	</form>
+	
 
 	</main>
 	<c:import url="inc/footer.jsp"/>

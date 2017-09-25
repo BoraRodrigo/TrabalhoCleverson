@@ -8,6 +8,8 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Query;
 import javax.servlet.RequestDispatcher;
 
+import org.hibernate.Hibernate;
+
 import br.edu.TrabalhoCleverson.entity.Empregado;
 import br.edu.facear.TrabalhoCleverson.service.EmpregadoService;
 import br.edu.facear.TrabalhoCleverson.util.Conexao;
@@ -17,10 +19,26 @@ public class EmpreDAO implements InterfaceDao<Empregado> {
 	EntityManagerFactory emf = Conexao.getInstance();
 
 	@Override
-	public void excluir(Empregado t) {
-		// TODO Auto-generated method stub
+	public void excluir(int t) {
+		
+			    EntityManager entityManager =emf.createEntityManager();
+			    try {
+			      // Inicia uma transação com o banco de dados.
+			      entityManager.getTransaction().begin();
+			      // Consulta a pessoa na base de dados através do seu ID.
+			      Empregado empregado = entityManager.find(Empregado.class, t);
+			      System.out.println("Excluindo os dados de: " + empregado.getNome());
+			      // Remove a pessoa da base de dados.
+			      entityManager.remove(empregado);
+			      // Finaliza a transação.
+			      entityManager.getTransaction().commit();
+			    } finally {
+			      entityManager.close();
+			    }
+			  }
+		
 
-	}
+	
 
 	@Override
 	public void salvar(Empregado empregado) {

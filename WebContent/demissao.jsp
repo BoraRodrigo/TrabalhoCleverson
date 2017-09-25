@@ -110,16 +110,7 @@ body {
 			<br>
 			
 	<h1>DESCRIÇÃO DE VERBAS</h1>
-	<div class="form-group">
-		<label for="campo1">Saldo de Salario:</label> <input type="text"
-			size="50" class="form-control" name="saldoDeSalario">
-	</div>
-
-	<div class="form-group">
-		<label for="campo1">Aviso Prévio:</label> <input type="text" size="50"
-			class="form-control" name="AvisoPrevio">
-	</div>
-
+	
 	<div class="form-group">
 		   <label for="campo1">Total:</label> <input type="text" size="50"
 			class="form-control" name="total" value="${saldo}">
@@ -130,8 +121,11 @@ body {
 			document.getElementById('dataAtual').value = new Date().toISOString().substring(0, 10);
 </script>
 
+	<form action="/Trabalho/demitirempregadoServlet" method="post">
 	<input type="submit" class="btn btn-green" value="Comfirmar Demissão" />
-	<input type="reset" class="btn btn-red" value="&#10000 Limpar" /> <c:import
+	</form>
+	<input type="reset" class="btn btn-red" value="&#10000 Limpar" />
+	 <c:import
 		url="inc/footer.jsp" /> </main>
 </body>
 </html>

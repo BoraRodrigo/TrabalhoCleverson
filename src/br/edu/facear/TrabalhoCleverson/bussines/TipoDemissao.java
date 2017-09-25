@@ -72,13 +72,27 @@ public class TipoDemissao {
 	}
 
 		/*Quase la ta bem errado*/
-	public float DemissaoSemJusta(float Salario, int dias, boolean aviso, boolean vencida, String inicio, String fim) {
+	public float DemissaoSemJusta(float Salario, int dias, String aviso, String vencida, String inicio, String fim) {
 		float calculo = 0;
+		boolean avisoprevio;
+		boolean feriasVencida;
+		
+		if(aviso.equals("sim")) {
+			 avisoprevio=true;
+		}else {
+			 avisoprevio=false;
+		}
+		
+		if(vencida.equals("sim")) {
+			 feriasVencida=true;
+		}else {
+			 feriasVencida=false;
+		}
 		calculo = cd.SaldoSalarial(Salario, dias) + 
 				cd.DecSalarioPropor(Salario, cd.MesesTrabalhados(inicio, fim))
-				+ cd.FeriasSemJusta(vencida, Salario) + 
+				+ cd.FeriasSemJusta(feriasVencida, Salario) + 
 				cd.FeriasProporcional(Salario, cd.MesesTrabalhados(inicio, fim))
-				+ cd.AvisoPrevio( aviso, Salario);
+				+ cd.AvisoPrevio( avisoprevio, Salario);
 
 		return calculo;
 	}

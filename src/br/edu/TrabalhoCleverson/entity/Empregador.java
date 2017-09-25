@@ -17,6 +17,8 @@ public class Empregador {
 	private String rg;
 	private String orgaoemissor;
 	private String cpf;
+	private String email;
+	private String senha;
 	
 	private String rua;
 	private String bairro;

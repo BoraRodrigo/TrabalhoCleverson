@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import br.edu.TrabalhoCleverson.dao.EmpreDAO;
+import br.edu.TrabalhoCleverson.entity.Empregado;
 import br.edu.facear.TrabalhoCleverson.bussines.TipoDemissao;
 import br.edu.facear.TrabalhoCleverson.service.EmpregadoService;
 
@@ -66,6 +67,8 @@ public class calcularVerbasServlet extends HttpServlet {
 		request.setAttribute("diasTrabalhados", diasTrabalhados);
 		request.setAttribute("avisoPrevio", avisoPrevio.toUpperCase());
 		request.setAttribute("feriasVencidas", feriasVencidas.toUpperCase());
+		request.setAttribute("id", id);
+		Empregado.idDemitir=Integer.parseInt(id);
 		
 		
 		RequestDispatcher rd = getServletContext().getRequestDispatcher("/demissao.jsp");

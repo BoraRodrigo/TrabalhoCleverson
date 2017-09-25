@@ -30,6 +30,7 @@ public class Empregado {
 	private String cep;
 	private String dataAdmisao;
 	private String salario;
+	public  static int  idDemitir;
 	
 	public Empregado(){
 		

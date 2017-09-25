@@ -22,8 +22,9 @@ body {
 	<c:import url="inc/header.jsp" />
 	<main class="container">
 
+	
 	<h1>Login:</h1>
-	<form action="#" method="post">
+    <form action="/Trabalho/loginServlet" method="post">
 	<div class="form-group">
 		<label for="campoNome">EMAIL:</label>
 		 <input type="text" width="7" size="5" class="form-control" name="email">
@@ -37,9 +38,10 @@ body {
 			<input type="submit"  class=" btn btn-success" value="Entrar" /> 
 			<input type="reset"
 				class="btn" value="Limpar" />
-	</div>			
+	</div>
+	</form>			
 	<a href="" class="form-group">Esqueci a senha</a>
-	</form>
+	
 	</main>
 	<c:import url="inc/footer.jsp" />
 </body>
