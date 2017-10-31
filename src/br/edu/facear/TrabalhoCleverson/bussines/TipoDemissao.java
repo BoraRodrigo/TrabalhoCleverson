@@ -1,7 +1,5 @@
 package br.edu.facear.TrabalhoCleverson.bussines;
 
-import org.apache.http.impl.io.SocketOutputBuffer;
-
 public class TipoDemissao {
 	CalculoDemissao cd = new CalculoDemissao();
 

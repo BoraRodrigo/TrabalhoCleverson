@@ -10,7 +10,7 @@ import br.edu.facear.TrabalhoCleverson.bussines.TipoDemissao;
 public class EmpregadoService {
 
 	public void cadastrarEmpregado(Empregado empregado) {
-
+		
 		InterfaceDao<Empregado> dao = new FactoryDao().createEmpregadoDao();
 		dao.salvar(empregado);
 
